@@ -1,0 +1,18 @@
+help me 
+
+window.onload = function(){
+	game = new Phaser.Game(800, 600, Phaser.AUTO);
+	game.state.add('Load', Load);
+	game.state.add('Play', Play);
+	game.state.start('Load');
+}
+
+var Load = function(game){};
+Load.prototype = {
+	preload: function(){
+		game.load.spritesheet('dude', 'assets/img/dude.png',32,48);
+	},
+	create: function(){
+		game.state.start('Play');
+	}
+};
