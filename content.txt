@@ -1,4 +1,4 @@
-hel type
+
 
 function armada(game, key, frame, scale){
 	//prototype sprite
@@ -148,12 +148,4 @@ armada.prototype.update = function(){
 
 }
 
-armada.prototype = Object.create(Phaser.Sprite.prototype);
-armada.prototype.constructor = armada;
 
-armada.prototype.update = function(){
-	if (game.input.keyboard.justPressed(Phaser.Keyboard.R)){
-		this.body.velocity.x = (this.body.velocity.x * -1);
-	}
-	game.world.wrap(this, 0, true, true, true);
-}
