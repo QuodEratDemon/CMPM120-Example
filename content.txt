@@ -1,18 +1,151 @@
-help me 
 
-window.onload = function(){
-	game = new Phaser.Game(800, 600, Phaser.AUTO);
-	game.state.add('Load', Load);
-	game.state.add('Play', Play);
-	game.state.start('Load');
+
+function armada(game, key, frame, scale){
+	//prototype sprite
+	Phaser.Sprite.call(this, game, game.rnd.integerInRange(64, game.width-64),
+		game.rnd.integerInRange(64, game.height-61), key, frame);
+
+	//armada properties
+	this.anchor.set(0.5);
+	this.scale.x = scale;
+	this.scale.y = scale;
+
+	game.physics.enable(this);
+
+	this.body.velocity.x = game.rnd.integerInRange(10, 100);
+	
+
+
 }
 
-var Load = function(game){};
-Load.prototype = {
-	preload: function(){
-		game.load.spritesheet('dude', 'assets/img/dude.png',32,48);
-	},
-	create: function(){
-		game.state.start('Play');
+armada.prototype = Object.create(Phaser.Sprite.prototype);
+armada.prototype.constructor = armada;
+
+armada.prototype.update = function(){
+	if (game.input.keyboard.justPressed(Phaser.Keyboard.R)){
+		this.body.velocity.x = (this.body.velocity.x * -1);
 	}
-};
+	game.world.wrap(this, 0, true, true, true);
+}function armada(game, key, frame, scale){
+	//prototype sprite
+	Phaser.Sprite.call(this, game, game.rnd.integerInRange(64, game.width-64),
+		game.rnd.integerInRange(64, game.height-61), key, frame);
+
+	//armada properties
+	this.anchor.set(0.5);
+	this.scale.x = scale;
+	this.scale.y = scale;
+
+	game.physics.enable(this);
+
+	this.body.velocity.x = game.rnd.integerInRange(10, 100);
+	
+
+
+}
+
+armada.prototype = Object.create(Phaser.Sprite.prototype);
+armada.prototype.constructor = armada;
+
+armada.prototype.update = function(){
+	if (game.input.keyboard.justPressed(Phaser.Keyboard.R)){
+		this.body.velocity.x = (this.body.velocity.x * -1);
+	}
+	game.world.wrap(this, 0, true, true, true);
+}function armada(game, key, frame, scale){
+	//prototype sprite
+	Phaser.Sprite.call(this, game, game.rnd.integerInRange(64, game.width-64),
+		game.rnd.integerInRange(64, game.height-61), key, frame);
+
+	//armada properties
+	this.anchor.set(0.5);
+	this.scale.x = scale;
+	this.scale.y = scale;
+
+	game.physics.enable(this);
+
+	this.body.velocity.x = game.rnd.integerInRange(10, 100);
+	
+
+
+}
+
+armada.prototype = Object.create(Phaser.Sprite.prototype);
+armada.prototype.constructor = armada;
+
+armada.prototype.update = function(){
+	if (game.input.keyboard.justPressed(Phaser.Keyboard.R)){
+		this.body.velocity.x = (this.body.velocity.x * -1);
+	}
+	game.world.wrap(this, 0, true, true, true);
+}function armada(game, key, frame, scale){
+	//prototype sprite
+	Phaser.Sprite.call(this, game, game.rnd.integerInRange(64, game.width-64),
+		game.rnd.integerInRange(64, game.height-61), key, frame);
+
+	//armada properties
+	this.anchor.set(0.5);
+	this.scale.x = scale;
+	this.scale.y = scale;
+
+	game.physics.enable(this);
+
+	this.body.velocity.x = game.rnd.integerInRange(10, 100);
+	
+
+
+}
+
+armada.prototype = Object.create(Phaser.Sprite.prototype);
+armada.prototype.constructor = armada;
+
+armada.prototype.update = function(){
+	if (game.input.keyboard.justPressed(Phaser.Keyboard.R)){
+		this.body.velocity.x = (this.body.velocity.x * -1);
+	}
+	game.world.wrap(this, 0, true, true, true);
+}function armada(game, key, frame, scale){
+	//prototype sprite
+	Phaser.Sprite.call(this, game, game.rnd.integerInRange(64, game.width-64),
+		game.rnd.integerInRange(64, game.height-61), key, frame);
+
+	//armada properties
+	this.anchor.set(0.5);
+	this.scale.x = scale;
+	this.scale.y = scale;
+
+	game.physics.enable(this);
+
+	this.body.velocity.x = game.rnd.integerInRange(10, 100);
+	
+
+
+}
+
+armada.prototype = Object.create(Phaser.Sprite.prototype);
+armada.prototype.constructor = armada;
+
+armada.prototype.update = function(){
+	if (game.input.keyboard.justPressed(Phaser.Keyboard.R)){
+		this.body.velocity.x = (this.body.velocity.x * -1);
+	}
+	game.world.wrap(this, 0, true, true, true);
+}function armada(game, key, frame, scale){
+	//prototype sprite
+	Phaser.Sprite.call(this, game, game.rnd.integerInRange(64, game.width-64),
+		game.rnd.integerInRange(64, game.height-61), key, frame);
+
+	//armada properties
+	this.anchor.set(0.5);
+	this.scale.x = scale;
+	this.scale.y = scale;
+
+	game.physics.enable(this);
+
+	this.body.velocity.x = game.rnd.integerInRange(10, 100);
+	
+
+
+}
+
+
